@@ -1,11 +1,46 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/ic_img_inicio_bg</item>
+    </style>
+
+    <style name="YourPrint" parent="@style/Text">
+        <item name="android:fontFamily">Roboto</item>
+        <item name="android:textColor">#FFFF1C83</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Text">28dp</style>
+
+
+    <style name="ParaQuePodamosVer" parent="@style/Text">
+        <item name="android:fontFamily">Roboto</item>
+        <item name="android:textColor">#FF343434</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="VerifiedBy" parent="@style/Text">
+        <item name="android:fontFamily">Roboto</item>
+        <item name="android:textColor">#FFADB5BD</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
 
 </resources>
