@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.karumi.dexter.Dexter;
@@ -29,16 +30,14 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         //Declaramos un Handler que hace de unión entre el hilo principal y el secundario
 
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if ((checkSelfPermission(CAMERA) != PackageManager.PERMISSION_GRANTED)) {
-
                 checkCameraPermission();
-            }else{
+            } else {
                 gotoMain(2000);
             }
 
-        }else{
+        } else {
             gotoMain(2000);
         }
 
@@ -59,14 +58,19 @@ public class SplashActivity extends AppCompatActivity {
 
                     @Override
                     public void onPermissionDenied(PermissionDeniedResponse response) {
-                        Toast.makeText(SplashActivity.this, "Entrega los permisos cochino ctmre!!!", Toast.LENGTH_LONG).show();
-
+                        Toast.makeText(SplashActivity.this, "Debes entregar permisos de la camara.", Toast.LENGTH_LONG).show();
+                        openSetting();
                     }
 
                     @Override
-                    public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {/* ... */}
+                    public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {
+                        Log.d("onActivityResult", "onPermissionRationaleShouldBeShown");
+                        Toast.makeText(SplashActivity.this, "No puede continuar sin permisos...", Toast.LENGTH_LONG).show();
+                        openSetting();
+                    }
                 }).check();
     }
+
 
     private void gotoMain(int delay) {
         final Handler handler = new Handler();
@@ -78,7 +82,7 @@ public class SplashActivity extends AppCompatActivity {
         }, delay); // 2 segundos de "delay"
     }
 
-    private void openSetting(){
+    private void openSetting() {
         Intent intent = new Intent();
         intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
         Uri uri = Uri.fromParts("package", getPackageName(), null);
