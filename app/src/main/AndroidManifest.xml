@@ -16,7 +16,9 @@
         android:roundIcon="@drawable/ic_logo_yourprint"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.CaptureActivity"></activity>
+        <activity android:name=".view.CaptureActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".view.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
