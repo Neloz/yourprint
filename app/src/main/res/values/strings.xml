@@ -6,4 +6,5 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="texto_dialog_incorrecto">Lo sentimos, la foto no es\n lo suficientemente exacta.\n Vuelve a intentarlo</string>
 </resources>

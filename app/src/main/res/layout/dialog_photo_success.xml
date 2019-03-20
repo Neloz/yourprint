@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/dialogPermission"
-    >
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:orientation="vertical"
+    android:paddingLeft="64dp"
+    android:paddingRight="16dp">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="32dp"
+        android:layout_margin="16dp"
         android:orientation="horizontal">
 
 
@@ -21,25 +20,28 @@
             android:layout_height="80dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
             android:layout_gravity="center"
-            android:layout_marginStart="26dp"
-            android:layout_marginTop="192dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="94dp"
+            android:layout_marginBottom="94dp"
             android:rotation="270"
             android:src="@drawable/ic_ico_finger_success" />
 
-
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="201dp"
-            android:layout_height="70dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="200dp"
-            android:layout_marginBottom="397dp"
-            android:layout_toEndOf="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="Roboto"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.14"
             android:rotation="270"
-            android:text="Genial!, tu huella comprueba tu identidad." />
+            android:text="Genial!, tu huella comprueba tu identidad."
+            android:textColor="#FF343434" />
+
+
 
 
 
