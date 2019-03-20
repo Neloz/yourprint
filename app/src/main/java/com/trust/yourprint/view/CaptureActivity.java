@@ -1,11 +1,15 @@
 package com.trust.yourprint.view;
 
+import android.app.Dialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.trust.yourprint.R;
@@ -39,6 +43,9 @@ public class CaptureActivity extends AppCompatActivity implements CameraBridgeVi
 
     private CameraBridgeViewBase   mOpenCvCameraView;
 
+    private Button btn_photo;
+
+    private LinearLayout asd;
     private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
         @Override
         public void onManagerConnected(int status) {
@@ -72,11 +79,24 @@ public class CaptureActivity extends AppCompatActivity implements CameraBridgeVi
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         setContentView(R.layout.activity_capture);
-
+        btn_photo = findViewById(R.id.btn_photo);
         mOpenCvCameraView = findViewById(R.id.camera);
         mOpenCvCameraView.setVisibility(CameraBridgeViewBase.VISIBLE);
+
         mOpenCvCameraView.setCvCameraViewListener(this);
+
+        btn_photo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Dialog dialog = new Dialog(CaptureActivity.this);
+                dialog.setContentView(R.layout.dialog_photo_success);
+                dialog.show();
+            }
+        });
+
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

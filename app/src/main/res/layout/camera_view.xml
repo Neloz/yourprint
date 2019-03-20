@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,9 +14,13 @@
         android:layout_weight="0.8"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/btn_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="0.2"
-        android:text="Boton" />
+        android:text="Boton"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="683dp"
+        android:layout_alignEnd="@+id/camera"/>
 
-</LinearLayout>
+</RelativeLayout>
