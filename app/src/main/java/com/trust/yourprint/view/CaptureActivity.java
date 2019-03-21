@@ -1,6 +1,7 @@
 package com.trust.yourprint.view;
 
 import android.app.Dialog;
+import android.support.design.button.MaterialButton;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +11,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.trust.yourprint.R;
@@ -44,7 +47,7 @@ public class CaptureActivity extends AppCompatActivity implements CameraBridgeVi
 
     private CameraBridgeViewBase   mOpenCvCameraView;
 
-    private Button btn_photo;
+    private ImageButton btn_photo;
     private FloatingActionButton btn_photo_incorrect;
     
     private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
@@ -98,6 +101,7 @@ public class CaptureActivity extends AppCompatActivity implements CameraBridgeVi
         btn_photo_incorrect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                dialog.dismiss();
                 Dialog dialog1 = new Dialog(CaptureActivity.this);
                 dialog1.setContentView(R.layout.dialog_photo_success);
                 dialog1.show();

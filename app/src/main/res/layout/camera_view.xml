@@ -4,24 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="1">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
     <org.opencv.android.JavaCameraView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/camera"
-        android:layout_weight="0.7"/>
+        android:id="@+id/camera" />
 
 
-    <Button
+    <!--<Button
         android:id="@+id/btn_photo"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="0.3"
-        android:text="Boton"
+        android:text="Tomar foto"
+        android:layout_margin="32dp"
         tools:layout_editor_absoluteX="54dp"
         tools:layout_editor_absoluteY="683dp"
-        android:layout_alignEnd="@+id/camera"/>
+        android:layout_alignEnd="@+id/camera"
+        android:background="@drawable/bk_boton_plano"/>-->
+
+
+    <!--<android.support.design.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:id="@+id/btn_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_button_photo"
+        android:theme="@style/RaisedButtonDark"
+        android:layout_margin="22dp"
+        app:rippleColor="@color/EditColorWhite"
+        android:textColor="@color/EditColorWhite"
+        app:strokeColor="@color/colorAccent"
+        android:rotation="270"/>-->
 
 </RelativeLayout>

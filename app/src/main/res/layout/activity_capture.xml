@@ -8,4 +8,6 @@
 
     <include layout="@layout/camera_view"/>
 
+    <include layout="@layout/barra_photo"/>
+
 </android.support.constraint.ConstraintLayout>
